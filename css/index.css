@@ -41,8 +41,35 @@ body {
   display: block;
 }
 
+
+#menu ~ div{
+  text-align: center;
+  height: 150px;
+}
+/* 头像 */
 .profile{
   width: 100px;
   height: 100px;
-  background-color: aqua;
+  border: 1px solid #000;
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+/* */
+fieldset {
+  border: none;
+  font-size: 20px;
+}
+fieldset div{
+  font-size: 12px;
+}
+
+/* 便签管理*/
+.content{
+  width: 800px;
+  border: 0px solid #000;
+}
+.content div{
+  display: inline;
+  margin-left: 10px;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +9,88 @@
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./lib/zTree/css/zTreeStyle/zTreeStyle.css">
 </head>
+
 <body>
+  <form id="form_layer" style="display: none;">
+    <div id="layer">
+      名称:
+      <input id="url_name" name="url_name" type="text"> URL:
+      <input id="url_value" name="url_value" type="text">
+      <br>
+    </div>
+  </form>
   <nav id="menu">
-    <div><img class="profile"></div>
     <div>
-       <ul id="tree" class="ztree"></ul>
+      <img class="profile">
+      <br>
+      <a href="javascript:;">Login</a>
+      <a href="javascript:;">Setting</a>
+    </div>
+    <hr>
+    <div>
+      <ul id="tree" class="ztree"></ul>
     </div>
   </nav>
-  
+
   <main id="panel">
     <header>
       <button class="toggle-button">☰</button>
-      <h2><ul id="tree" class="ztree"></ul></h2>
-      
     </header>
+    <div>
+      <div class="">
+        <fieldset>
+          <legend>工具</legend>
+          <div class="content" id="urls">
+            <div v-for="(item, index) in items">
+              <img v-bind:src="[item.url_ico]" style="width: 16px;height: 16px;">
+              <a v-bind:href="[item.url_value]" href="www.baidu.com">{{item.url_name}}</a>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="">
+        <fieldset>
+          <legend>搜索</legend>
+          <div class="content">
+            <div>
+              <img src="https://www.baidu.com/favicon.ico" style="width: 16px;height: 16px;">
+              <a href="www.baidu.com">百度</a>
+            </div>
+            <div>
+              <img src="https://www.baidu.com/favicon.ico" style="width: 16px;height: 16px;">
+              <a href="www.baidu.com">百度</a>
+            </div>
+            <span onclick="addNewTagUrl()" style="cursor:pointer">+</span>
+          </div>
+        </fieldset>
+      </div>
+      <div class="">
+        <fieldset>
+          <legend>搜索</legend>
+          <div class="content">
+            <div>
+              <img src="https://www.baidu.com/favicon.ico" style="width: 16px;height: 16px;">
+              <a href="www.baidu.com">百度</a>
+            </div>
+            <div>
+              <img src="https://www.baidu.com/favicon.ico" style="width: 16px;height: 16px;">
+              <a href="www.baidu.com">百度</a>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
   </main>
 
 </body>
-<script src="./lib/jquery-1.4.4.min.js"></script>
+<script src="./lib/jquery-3.1.0.js"></script>
 <script src="./lib/slideout/slideout.min.js"></script>
 <script src="./lib/zTree/js/jquery.ztree.all.min.js"></script>
+<script src="./lib/vue/vue.min.js"></script>
+<script src="./lib/layui/layer/layer.js"></script>
+
 <script src="./js/index.js"></script>
+<script src="./js/indexEvent.js"></script>
+
 
 </html>
