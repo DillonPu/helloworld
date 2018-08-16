@@ -19,8 +19,7 @@ function addNewTagUrl() {
       })
     }
     , btn2: function (index, layero) {
-      //按钮【按钮二】的回调
-      // alert("no");
+      
     }
   });
 }
@@ -30,22 +29,22 @@ var appInit = new Vue({
   data: {
     items: [
       {
-        url_name: '谷歌',
+        url_name: 'Baidu',
         url_value: "www.baidu.com",
         url_ico: "https://www.baidu.com/favicon.ico"
       },
       {
-        url_name: '百度',
+        url_name: 'Baidu',
         url_value: "www.baidu.com",
         url_ico: "https://www.baidu.com/favicon.ico"
       },
       {
-        url_name: '百度',
+        url_name: 'Baidu',
         url_value: "www.baidu.com",
         url_ico: "https://www.baidu.com/favicon.ico"
       },
       {
-        url_name: '百度',
+        url_name: 'Baidu',
         url_value: "www.baidu.com",
         url_ico: "https://www.baidu.com/favicon.ico"
       }
